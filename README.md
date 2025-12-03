@@ -119,70 +119,50 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
 ## Screenshots 
 
 ### Light Mode
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/homepage.jpg" width="200" /><br/>
-        <strong>Home</strong>
-      </td>
-      <td align="center">
-        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/createhabit.jpg" width="200" /><br/>
-        <strong>Create Habit</strong>
-      </td>
-      <td align="center">
-        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/stats.jpg" width="200" /><br/>
-        <strong>Progress</strong>
-      </td>
-      <td align="center">
-        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/settings.jpg" width="200" /><br/>
-        <strong>Settings</strong>
-      </td>
-    </tr>
-    <tr>
-      <td align="center">
-        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/emptyhomepage.jpg" width="200" /><br/>
-        <strong>Empty Home</strong>
-      </td>
-      <td align="center">
-        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/emptyprogress.jpg" width="200" /><br/>
-        <strong>Empty Progress</strong>
-      </td>
-      <td align="center">
-        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/login.jpg" width="200" /><br/>
-        <strong>Login</strong>
-      </td>
-      <td align="center">
-        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/signup.jpg" width="200" /><br/>
-        <strong>Sign Up</strong>
-      </td>
-    </tr>
-  </table>
-</div>
+
+<table>
+  <tr>
+    <td><img src="screenshots/homepage.jpg" width="200" alt="Home" /></td>
+    <td><img src="screenshots/createhabit.jpg" width="200" alt="Create Habit" /></td>
+    <td><img src="screenshots/stats.jpg" width="200" alt="Progress" /></td>
+    <td><img src="screenshots/settings.jpg" width="200" alt="Settings" /></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Home</b></td>
+    <td align="center"><b>Create Habit</b></td>
+    <td align="center"><b>Progress</b></td>
+    <td align="center"><b>Settings</b></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/emptyhomepage.jpg" width="200" alt="Empty Home" /></td>
+    <td><img src="screenshots/emptyprogress.jpg" width="200" alt="Empty Progress" /></td>
+    <td><img src="screenshots/login.jpg" width="200" alt="Login" /></td>
+    <td><img src="screenshots/signup.jpg" width="200" alt="Sign Up" /></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Empty Home</b></td>
+    <td align="center"><b>Empty Progress</b></td>
+    <td align="center"><b>Login</b></td>
+    <td align="center"><b>Sign Up</b></td>
+  </tr>
+</table>
 
 ### Dark Mode
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/darkhomepage.jpg" width="200" /><br/>
-        <strong>Home (dark)</strong>
-      </td>
-      <td align="center">
-        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/darkcreatehabit.jpg" width="200" /><br/>
-        <strong>Create Habit (dark)</strong>
-      </td>
-      <td align="center">
-        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/darkstats.jpg" width="200" /><br/>
-        <strong>Stats (dark)</strong>
-      </td>
-      <td align="center">
-        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/darksettings.jpg" width="200" /><br/>
-        <strong>Settings (dark)</strong>
-      </td>
-    </tr>
-  </table>
-</div>
+
+<table>
+  <tr>
+    <td><img src="screenshots/darkhomepage.jpg" width="200" alt="Home Dark" /></td>
+    <td><img src="screenshots/darkcreatehabit.jpg" width="200" alt="Create Habit Dark" /></td>
+    <td><img src="screenshots/darkstats.jpg" width="200" alt="Stats Dark" /></td>
+    <td><img src="screenshots/darksettings.jpg" width="200" alt="Settings Dark" /></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Home (dark)</b></td>
+    <td align="center"><b>Create Habit (dark)</b></td>
+    <td align="center"><b>Stats (dark)</b></td>
+    <td align="center"><b>Settings (dark)</b></td>
+  </tr>
+</table>
 ## Testing
    - Manual Testing Checklist
       - Create, edit, and delete habits
