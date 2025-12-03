@@ -123,37 +123,37 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
   <table>
     <tr>
       <td align="center">
-        <img src="./screenshots/homepage.jpg" width="200" /><br/>
+        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/homepage.jpg" width="200" /><br/>
         <strong>Home</strong>
       </td>
       <td align="center">
-        <img src="./screenshots/createhabit.jpg" width="200" /><br/>
+        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/createhabit.jpg" width="200" /><br/>
         <strong>Create Habit</strong>
       </td>
       <td align="center">
-        <img src="./screenshots/stats.jpg" width="200" /><br/>
+        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/stats.jpg" width="200" /><br/>
         <strong>Progress</strong>
       </td>
       <td align="center">
-        <img src="./screenshots/settings.jpg" width="200" /><br/>
+        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/settings.jpg" width="200" /><br/>
         <strong>Settings</strong>
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="./screenshots/emptyhomepage.jpg" width="200" /><br/>
+        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/emptyhomepage.jpg" width="200" /><br/>
         <strong>Empty Home</strong>
       </td>
       <td align="center">
-        <img src="./screenshots/emptyprogress.jpg" width="200" /><br/>
+        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/emptyprogress.jpg" width="200" /><br/>
         <strong>Empty Progress</strong>
       </td>
       <td align="center">
-        <img src="./screenshots/login.jpg" width="200" /><br/>
+        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/login.jpg" width="200" /><br/>
         <strong>Login</strong>
       </td>
       <td align="center">
-        <img src="./screenshots/signup.jpg" width="200" /><br/>
+        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/signup.jpg" width="200" /><br/>
         <strong>Sign Up</strong>
       </td>
     </tr>
@@ -165,19 +165,19 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
   <table>
     <tr>
       <td align="center">
-        <img src="./screenshots/darkhomepage.jpg" width="200" /><br/>
+        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/darkhomepage.jpg" width="200" /><br/>
         <strong>Home (dark)</strong>
       </td>
       <td align="center">
-        <img src="./screenshots/darkcreatehabit.jpg" width="200" /><br/>
+        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/darkcreatehabit.jpg" width="200" /><br/>
         <strong>Create Habit (dark)</strong>
       </td>
       <td align="center">
-        <img src="./screenshots/darkstats.jpg" width="200" /><br/>
+        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/darkstats.jpg" width="200" /><br/>
         <strong>Stats (dark)</strong>
       </td>
       <td align="center">
-        <img src="./screenshots/darksettings.jpg" width="200" /><br/>
+        <img src="https://raw.githubusercontent.com/Faathi-707/Habit-Tracker-/main/screenshots/darksettings.jpg" width="200" /><br/>
         <strong>Settings (dark)</strong>
       </td>
     </tr>
