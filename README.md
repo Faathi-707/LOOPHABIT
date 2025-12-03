@@ -122,22 +122,22 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
 
 <table>
   <tr>
-    <td><img src="./screenshots/homepage.png" width="240" /><div>Home (light)</div></td>
-    <td><img src="./screenshots/createhabit.png" width="240" /><div>Create Habit (light)</div></td>
-    <td><img src="./screenshots/stats.png" width="240" /><div>Stats (light)</div></td>
-    <td><img src="./screenshots/settings.png" width="240" /><div>Settings (light)</div></td>
+    <td><img src="./screenshots/homepage.jpg" width="240" /><div>Home (light)</div></td>
+    <td><img src="./screenshots/createhabit.jpg" width="240" /><div>Create Habit (light)</div></td>
+    <td><img src="./screenshots/stats.jpg" width="240" /><div>Stats (light)</div></td>
+    <td><img src="./screenshots/settings.jpg" width="240" /><div>Settings (light)</div></td>
   </tr>
   <tr>
-    <td><img src="./screenshots/emptyhomepage.png" width="240" /><div>Empty Home (light)</div></td>
-    <td><img src="./screenshots/emptyprogress.png" width="240" /><div>Empty Stats (light)</div></td>
-    <td><img src="./screenshots/login.png" width="240" /><div>Login</div></td>
-    <td><img src="./screenshots/signup.png" width="240" /><div>Sign Up</div></td>
+    <td><img src="./screenshots/emptyhomepage.jpg" width="240" /><div>Empty Home (light)</div></td>
+    <td><img src="./screenshots/emptyprogress.jpg" width="240" /><div>Empty Stats (light)</div></td>
+    <td><img src="./screenshots/login.jpg" width="240" /><div>Login</div></td>
+    <td><img src="./screenshots/signup.jpg" width="240" /><div>Sign Up</div></td>
   </tr>
   <tr>
-    <td><img src="./screenshots/darkhomepage.png" width="240" /><div>Home (dark)</div></td>
-    <td><img src="./screenshots/darkcreatehabit.png" width="240" /><div>Create Habit (dark)</div></td>
-    <td><img src="./screenshots/darkstats.png" width="240" /><div>Stats (dark)</div></td>
-    <td><img src="./screenshots/darksettings.png" width="240" /><div>Settings (dark)</div></td>
+    <td><img src="./screenshots/darkhomepage.jpg" width="240" /><div>Home (dark)</div></td>
+    <td><img src="./screenshots/darkcreatehabit.jpg" width="240" /><div>Create Habit (dark)</div></td>
+    <td><img src="./screenshots/darkstats.jpg" width="240" /><div>Stats (dark)</div></td>
+    <td><img src="./screenshots/darksettings.jpg" width="240" /><div>Settings (dark)</div></td>
   </tr>
 </table>
 ## Testing
