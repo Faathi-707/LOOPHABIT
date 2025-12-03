@@ -113,8 +113,6 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
             │    └─ / (habits)/[id]
             ├─ Progress tab
             │    └─ /progress
-            ├─ Focus tab
-            │    └─ /focus or /pomodoro
             └─ Settings tab
                   └─ /settings
 
