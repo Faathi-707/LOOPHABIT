@@ -27,7 +27,7 @@ export const Chip: React.FC<ChipProps> = ({
     paddingVertical: spacing.sm,
     borderRadius: 999,
     borderWidth: 2,
-    borderColor: selected ? scheme.primary : scheme.textSecondary,
+    borderColor: selected ? scheme.primary : scheme.primary,
     backgroundColor: selected ? scheme.primary : 'transparent',
     alignItems: 'center',
     justifyContent: 'center',
@@ -36,7 +36,7 @@ export const Chip: React.FC<ChipProps> = ({
   const textStyle: TextStyle = {
     fontSize: 13,
     fontWeight: '600' as const,
-    color: selected ? '#FFFFFF' : scheme.text,
+    color: selected ? '#FFFFFF' : (isDarkMode ? '#FFFFFF' : scheme.primary),
   };
 
   return (

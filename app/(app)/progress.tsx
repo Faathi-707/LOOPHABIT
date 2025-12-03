@@ -74,7 +74,7 @@ interface StatCardProps {
 }
 
 const StatCard: React.FC<StatCardProps> = ({ label, accentColor, completed, total }) => {
-  const { colors } = useTheme()
+  const { colors, isRTL } = useTheme()
   const percentage = total > 0 ? (completed / total) * 100 : 0
 
   return (
@@ -93,7 +93,8 @@ const StatCard: React.FC<StatCardProps> = ({ label, accentColor, completed, tota
       <View
         style={{
           position: 'absolute',
-          left: 0,
+          left: isRTL ? 'auto' : 0,
+          right: isRTL ? 0 : 'auto',
           top: 0,
           bottom: 0,
           width: `${percentage}%`,
@@ -108,6 +109,7 @@ const StatCard: React.FC<StatCardProps> = ({ label, accentColor, completed, tota
           color: colors.text,
           fontWeight: '600',
           zIndex: 1,
+          textAlign: isRTL ? 'right' : 'left',
         }}
       >
         {label}
@@ -119,7 +121,7 @@ const StatCard: React.FC<StatCardProps> = ({ label, accentColor, completed, tota
 export default function ProgressScreen() {
   const { getProgress } = useHabitStore()
   const { language } = useAuthStore()
-  const { colors } = useTheme()
+  const { colors, isRTL } = useTheme()
 
   const progress = getProgress()
   const totalHabits =
@@ -147,23 +149,24 @@ export default function ProgressScreen() {
             ...typography.h2,
             color: colors.text,
             marginBottom: spacing.md,
+            textAlign: isRTL ? 'right' : 'left',
           }}
         >
           {t('stats.title', language) || 'Progress'}
         </Text>
         {/* Habit Progress Section */}
-        {!totalHabits && (
-          <>
-            <Text
-              style={{
-                ...typography.body,
-                color: colors.textSecondary,
-                marginBottom: spacing.md,
-                fontWeight: '600',
-              }}
-            >
-              Habit Progress
-            </Text>
+        <>
+          <Text
+            style={{
+              ...typography.body,
+              color: colors.textSecondary,
+              marginBottom: spacing.md,
+              fontWeight: '600',
+              textAlign: isRTL ? 'right' : 'left',
+            }}
+          >
+            Habit Progress
+          </Text>
 
             <View
               style={{
@@ -222,8 +225,7 @@ export default function ProgressScreen() {
               />
             </View>
           </>
-        )}
-      </ScrollView>
-    </SafeAreaView>
-  )
-}
+        </ScrollView>
+      </SafeAreaView>
+    )
+  }

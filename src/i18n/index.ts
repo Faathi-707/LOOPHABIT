@@ -1,6 +1,6 @@
 export const translations = { 
   en: {
-    'nav.habits': 'Gaskur',
+    'nav.habits': 'Habits',
     'nav.progress': 'Progress',
     'nav.stats': 'Stats',
     'auth.login': 'Login',

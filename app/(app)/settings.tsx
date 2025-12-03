@@ -30,7 +30,7 @@ export default function SettingsScreen() {
     user,
   } = useAuthStore()
   const { clearAll } = useHabitStore()
-  const { colors, isDark } = useTheme()
+  const { colors, isDark, isRTL } = useTheme()
 
   const handleLogout = () => {
     Alert.alert(
@@ -97,6 +97,7 @@ export default function SettingsScreen() {
                     ...typography.label,
                     color: colors.textSecondary,
                     marginBottom: spacing.xs,
+                    textAlign: isRTL ? 'right' : 'left',
                   }}
                 >
                   {t('auth.name', language) || 'Name'}
@@ -106,6 +107,7 @@ export default function SettingsScreen() {
                     ...typography.bodyLarge,
                     color: colors.text,
                     marginBottom: spacing.md,
+                    textAlign: isRTL ? 'right' : 'left',
                   }}
                 >
                   {user.name}
@@ -116,6 +118,7 @@ export default function SettingsScreen() {
                     ...typography.label,
                     color: colors.textSecondary,
                     marginBottom: spacing.xs,
+                    textAlign: isRTL ? 'right' : 'left',
                   }}
                 >
                   {t('auth.email', language) || 'Email'}
@@ -125,6 +128,7 @@ export default function SettingsScreen() {
                     ...typography.bodyLarge,
                     color: colors.text,
                     marginBottom: spacing.lg,
+                    textAlign: isRTL ? 'right' : 'left',
                   }}
                 >
                   {user.email}
@@ -143,6 +147,7 @@ export default function SettingsScreen() {
                     ...typography.body,
                     color: colors.textSecondary,
                     marginBottom: spacing.md,
+                    textAlign: isRTL ? 'right' : 'left',
                   }}
                 >
                   {t('auth.noAccount', language) || 'Not signed in'}
@@ -162,6 +167,7 @@ export default function SettingsScreen() {
               color: colors.textSecondary,
               marginBottom: spacing.md,
               marginTop: spacing.lg,
+              textAlign: isRTL ? 'right' : 'left',
             }}
           >
             {t('settings.theme', language) || 'Theme'}
@@ -169,7 +175,7 @@ export default function SettingsScreen() {
 
           <View
             style={{
-              flexDirection: 'row',
+              flexDirection: isRTL ? 'row-reverse' : 'row',
               justifyContent: 'space-between',
               alignItems: 'center',
               backgroundColor: colors.surface,
@@ -184,6 +190,7 @@ export default function SettingsScreen() {
               style={{
                 ...typography.body,
                 color: colors.text,
+                textAlign: isRTL ? 'right' : 'left',
               }}
             >
               {t('settings.darkMode', language) || 'Dark Mode'}
@@ -205,6 +212,7 @@ export default function SettingsScreen() {
               ...typography.label,
               color: colors.textSecondary,
               marginBottom: spacing.md,
+              textAlign: isRTL ? 'right' : 'left',
             }}
           >
             {t('settings.language', language) || 'Language'}
@@ -276,6 +284,7 @@ export default function SettingsScreen() {
               ...typography.label,
               color: colors.textSecondary,
               marginBottom: spacing.md,
+              textAlign: isRTL ? 'right' : 'left',
             }}
           >
             {t('settings.about', language) || 'About'}
@@ -292,18 +301,19 @@ export default function SettingsScreen() {
           >
             <View
               style={{
-                flexDirection: 'row',
+                flexDirection: isRTL ? 'row-reverse' : 'row',
                 justifyContent: 'space-between',
                 alignItems: 'center',
               }}
             >
-              <Text style={{ ...typography.body, color: colors.text }}>
+              <Text style={{ ...typography.body, color: colors.text, textAlign: isRTL ? 'right' : 'left' }}>
                 App Version
               </Text>
               <Text
                 style={{
                   ...typography.bodySmall,
                   color: colors.textSecondary,
+                  textAlign: isRTL ? 'right' : 'left',
                 }}
               >
                 1.0.0

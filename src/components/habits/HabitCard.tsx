@@ -9,6 +9,7 @@ import { spacing, typography, borderRadius, colors, useTheme} from '@/theme';
 import { getTodayString, isHabitCompletedOnDate } from '@/utils/helpers';
 import { HabitIcon } from '@/components/habits/HabitIcon'
 import { getHabitIconConfig } from '@/constants/habitIcons'
+import { useAuthStore } from '@/store/authStore';
 
 interface HabitCardProps {
   habit: Habit;
@@ -30,12 +31,14 @@ export const HabitCard: React.FC<HabitCardProps> = ({
   const today = getTodayString();
   const router = useRouter()
   const isCompletedToday = isHabitCompletedOnDate(completions, habit.id, today);
-  const { colors } = useTheme()
+  const { colors, isRTL, isDark } = useTheme()
+  const { language } = useAuthStore();
   const iconCfg = getHabitIconConfig(habit.icon)
   const frequencyLabel = habit.frequency // daily weekly monthly
 
-  // Map frequency to category-specific habit color
+  // Map user's chosen color to theme-appropriate variant
   const getHabitBackgroundColor = () => {
+    // Use frequency-based theme colors which already have light/dark variants
     switch (habit.frequency) {
       case 'daily':
         return colors.habitDaily;
@@ -46,11 +49,34 @@ export const HabitCard: React.FC<HabitCardProps> = ({
       default:
         return colors.surface;
     }
-  }
+  };
 
   const handleCardPress = () => {
     router.push(`/(app)/(habits)/${habit.id}` as never)
   }
+
+  const getFrequencyInLanguage = () => {
+    if (language === 'dv') {
+      switch (habit.frequency) {
+        case 'daily':
+          return 'ދިވެހި';
+        case 'weekly':
+          return 'ހަފުތާ';
+        case 'monthly':
+          return 'މަސްވަރީ';
+        default:
+          return habit.frequency;
+      }
+    }
+    return habit.frequency;
+  };
+
+  const getStatusInLanguage = () => {
+    if (language === 'dv') {
+      return isCompletedToday ? 'ސާފާ' : 'ސަްވާބާރ';
+    }
+    return isCompletedToday ? 'Done' : 'Pending';
+  };
 
   return (
     <View
@@ -61,7 +87,7 @@ export const HabitCard: React.FC<HabitCardProps> = ({
         marginBottom: spacing.md,
       }}
     >
-      <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+      <View style={{ flexDirection: isRTL ? 'row-reverse' : 'row', alignItems: 'center' }}>
         {/* Checkbox or status */}
         <Pressable
           onPress={() => {
@@ -76,7 +102,8 @@ export const HabitCard: React.FC<HabitCardProps> = ({
               borderColor: colors.primary,
               alignItems: 'center',
               justifyContent: 'center',
-              marginRight: spacing.md,
+              marginRight: isRTL ? 0 : spacing.md,
+              marginLeft: isRTL ? spacing.md : 0,
               backgroundColor: isCompletedToday
                 ? colors.primary
                 : 'transparent',
@@ -100,17 +127,18 @@ export const HabitCard: React.FC<HabitCardProps> = ({
         {/* Icon and text block - pressable for navigation */}
         <Pressable
           onPress={handleCardPress}
-          style={{ flex: 1, flexDirection: 'row', alignItems: 'center' }}
+          style={{ flex: 1, flexDirection: isRTL ? 'row-reverse' : 'row', alignItems: 'center' }}
         >
           <HabitIcon iconKey={habit.icon} size={24} />
 
-          <View style={{ marginLeft: spacing.md, flex: 1 }}>
+          <View style={{ marginLeft: isRTL ? 0 : spacing.md, marginRight: isRTL ? spacing.md : 0, flex: 1 }}>
             {/* Main habit name */}
             <Text
               numberOfLines={1}
               style={{
                 ...typography.bodyLarge,
                 color: colors.habitTextPrimary,
+                textAlign: isRTL ? 'right' : 'left',
               }}
             >
               {habit.name}
@@ -123,10 +151,11 @@ export const HabitCard: React.FC<HabitCardProps> = ({
                 ...typography.caption,
                 color: colors.habitTextSecondary,
                 marginTop: 2,
+                textAlign: isRTL ? 'right' : 'left',
               }}
             >
-              {iconCfg.label} • {frequencyLabel}{' '}
-              {isCompletedToday ? '• Done' : '• Pending'}
+              {iconCfg.label} • {getFrequencyInLanguage()}{' '}
+              • {getStatusInLanguage()}
             </Text>
           </View>
         </Pressable>

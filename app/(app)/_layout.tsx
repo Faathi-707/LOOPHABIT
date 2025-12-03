@@ -1,18 +1,26 @@
 // app/(app)/_layout.tsx
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Tabs, useRouter, Redirect } from 'expo-router'
 import { Ionicons } from '@expo/vector-icons'
-import { Pressable } from 'react-native'
+import { Pressable, I18nManager } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useTheme } from '@/theme'
 import { useAuthStore } from '@/store/authStore'
 import { t } from '@/i18n'
 
 export default function AppTabsLayout() {
-  const { colors } = useTheme()
+  const { colors, isRTL } = useTheme()
   const { language, isLoggedIn, isGuest } = useAuthStore()
   const insets = useSafeAreaInsets()
   const router = useRouter()
+
+  // Apply RTL direction to React Native when language changes
+  useEffect(() => {
+    I18nManager.forceRTL(isRTL);
+    if (isRTL !== I18nManager.isRTL) {
+      I18nManager.allowRTL(true);
+    }
+  }, [isRTL]);
 
   // Auth guard for everything under (app)
   if (!isLoggedIn && !isGuest) {
@@ -22,8 +30,8 @@ export default function AppTabsLayout() {
   return (
     <Tabs
       screenOptions={{
-        headerTitleAlign: 'left',
-        headerTitle: 'Habit Tracker',
+        headerTitleAlign: isRTL ? 'center' : 'left',
+        headerTitle: 'Loop Habit',
         headerStyle: {
           backgroundColor: colors.surface,
           borderBottomColor: colors.border,
@@ -38,7 +46,8 @@ export default function AppTabsLayout() {
           <Pressable
             onPress={() => router.push('/(app)/settings')}
             style={{
-              marginRight: 16,
+              marginRight: isRTL ? 0 : 16,
+              marginLeft: isRTL ? 16 : 0,
               width: 44,
               height: 44,
               alignItems: 'center',
@@ -70,7 +79,7 @@ export default function AppTabsLayout() {
       <Tabs.Screen
         name="(habits)"
         options={{
-          tabBarLabel: 'Habits',
+          tabBarLabel: t('nav.habits', language),
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="checkmark-circle" color={color} size={size} />
           ),
@@ -93,7 +102,7 @@ export default function AppTabsLayout() {
         name="progress"
         options={{
           href: '/(app)/progress',
-          tabBarLabel: 'Progress',
+          tabBarLabel: t('nav.progress', language),
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="bar-chart" color={color} size={size} />),
         }}

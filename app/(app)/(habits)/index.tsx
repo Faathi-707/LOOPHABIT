@@ -19,7 +19,7 @@ export default function HabitsScreen() {
   const toggleCompletion = useHabitStore((s) => s.toggleCompletion);
   const load = useHabitStore((s) => s.load);
   const { language } = useAuthStore();
-  const { colors } = useTheme();
+  const { colors, isRTL } = useTheme();
   const [selectedDate, setSelectedDate] = useState<string | undefined>();
 
   // Load habits on mount and when auth state changes
@@ -39,17 +39,17 @@ export default function HabitsScreen() {
         <View
           style={{
             marginBottom: spacing.lg,
-            flexDirection: 'row',
+            flexDirection: isRTL ? 'row-reverse' : 'row',
             justifyContent: 'space-between',
             alignItems: 'flex-start',
             gap: spacing.md,
           }}
         >
-          <View style={{ flex: 1 }}>
-            <Text style={{ ...typography.h2, color: colors.text, marginBottom: spacing.xs }}>
+          <View style={{ flex: 1, alignItems: isRTL ? 'flex-end' : 'flex-start' }}>
+            <Text style={{ ...typography.h2, color: colors.text, marginBottom: spacing.xs, textAlign: isRTL ? 'right' : 'left' }}>
               {t('habits.title', language)}
             </Text>
-            <Text style={{ ...typography.body, color: colors.textSecondary }}>
+            <Text style={{ ...typography.body, color: colors.textSecondary, textAlign: isRTL ? 'right' : 'left' }}>
               {t('habits.subtitle', language)}
             </Text>
           </View>
@@ -69,8 +69,8 @@ export default function HabitsScreen() {
             {/* Daily Section */}
             {activeHabits.filter(h => h.frequency === 'daily').length > 0 && (
               <>
-                <Text style={{ ...typography.label, color: colors.textSecondary, marginTop: spacing.lg, marginBottom: spacing.md }}>
-                  Daily
+                <Text style={{ ...typography.label, color: colors.textSecondary, marginTop: spacing.lg, marginBottom: spacing.md, textAlign: isRTL ? 'right' : 'left' }}>
+                  {language === 'dv' ? 'ދިވެހި' : 'Daily'}
                 </Text>
                 <View style={{ gap: spacing.md, marginBottom: spacing.xl }}>
                   {activeHabits.filter(h => h.frequency === 'daily').map((habit) => (
@@ -89,8 +89,8 @@ export default function HabitsScreen() {
             {/* Weekly Section */}
             {activeHabits.filter(h => h.frequency === 'weekly').length > 0 && (
               <>
-                <Text style={{ ...typography.label, color: colors.textSecondary, marginTop: spacing.lg, marginBottom: spacing.md }}>
-                  Weekly
+                <Text style={{ ...typography.label, color: colors.textSecondary, marginTop: spacing.lg, marginBottom: spacing.md, textAlign: isRTL ? 'right' : 'left' }}>
+                  {language === 'dv' ? 'ހަފުތާ' : 'Weekly'}
                 </Text>
                 <View style={{ gap: spacing.md, marginBottom: spacing.xl }}>
                   {activeHabits.filter(h => h.frequency === 'weekly').map((habit) => (
@@ -109,8 +109,8 @@ export default function HabitsScreen() {
             {/* Monthly Section */}
             {activeHabits.filter(h => h.frequency === 'monthly').length > 0 && (
               <>
-                <Text style={{ ...typography.label, color: colors.textSecondary, marginTop: spacing.lg, marginBottom: spacing.md }}>
-                  Monthly
+                <Text style={{ ...typography.label, color: colors.textSecondary, marginTop: spacing.lg, marginBottom: spacing.md, textAlign: isRTL ? 'right' : 'left' }}>
+                  {language === 'dv' ? 'މަސްވަރީ' : 'Monthly'}
                 </Text>
                 <View style={{ gap: spacing.md, marginBottom: spacing.xl }}>
                   {activeHabits.filter(h => h.frequency === 'monthly').map((habit) => (

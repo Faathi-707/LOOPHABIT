@@ -2,10 +2,12 @@ import { useAuthStore } from '@/store/authStore';
 import { colors } from '@/theme/colors';
 
 export const useTheme = () => {
-  const { isDarkMode } = useAuthStore();
+  const { isDarkMode, language } = useAuthStore();
+  const isRTL = language === 'dv'; // Dhivehi is RTL
 
   return {
     isDark: isDarkMode,
+    isRTL,
     colors: isDarkMode ? colors.dark : colors.light,
   };
 };
