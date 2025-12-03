@@ -1,0 +1,20 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "target": "es2020",
+    "lib": ["es2020", "dom"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "noEmit": true,
+    "moduleResolution": "bundler",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]        
+    },
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "types": ["expo-router"]  
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules"]
+}
