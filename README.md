@@ -122,20 +122,6 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
 
 All screenshots are stored in `/screenshots` and represent both light and dark themes.
 
-| No. | Description | Preview |
-|-----|--------------|----------|
-| 1 | Habits – Light Mode | ![z1](./screenshots/z1.png) |
-| 2 | Add New Habit | ![z2](./screenshots/z2.png) |
-| 3 | Habits – Dark Mode | ![z3](./screenshots/z3.png) |
-| 4 | Progress – Light Mode | ![z4](./screenshots/z4.png) |
-| 5 | Progress – Dark Mode | ![z5](./screenshots/z5.png) |
-| 6 | Focus Timer | ![z6](./screenshots/z6.png) |
-| 7 | Pomodoro Running | ![z7](./screenshots/z7.png) |
-| 8 | Settings – Light Mode | ![z8](./screenshots/z8.png) |
-| 9 | Settings – Dark Mode | ![z9](./screenshots/z9.png) |
-| 10 | Language Toggle (Dhivehi) | ![z10](./screenshots/z10.png) |
-| 11 | Empty State Example | ![z11](./screenshots/z11.png) |
-
 7. Testing
    - Manual Testing Checklist
       - Create, edit, and delete habits
