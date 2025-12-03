@@ -118,15 +118,26 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
 
 ## Screenshots 
 
-### Light Mode
-
-![Home](screenshots/homepage.jpg) ![Create Habit](screenshots/createhabit.jpg) ![Progress](screenshots/stats.jpg) ![Settings](screenshots/settings.jpg)
-
-![Empty Home](screenshots/emptyhomepage.jpg) ![Empty Progress](screenshots/emptyprogress.jpg) ![Login](screenshots/login.jpg) ![Sign Up](screenshots/signup.jpg)
-
-### Dark Mode
-
-![Home Dark](screenshots/darkhomepage.jpg) ![Create Habit Dark](screenshots/darkcreatehabit.jpg) ![Stats Dark](screenshots/darkstats.jpg) ![Settings Dark](screenshots/darksettings.jpg)
+<table>
+  <tr>
+    <td><img src="./screenshots/homepage.jpg" width="240" /><div>Home (light)</div></td>
+    <td><img src="./screenshots/createhabit.jpg" width="240" /><div>Create Habit (light)</div></td>
+    <td><img src="./screenshots/stats.jpg" width="240" /><div>Stats (light)</div></td>
+    <td><img src="./screenshots/settings.jpg" width="240" /><div>Settings (light)</div></td>
+  </tr>
+  <tr>
+    <td><img src="./screenshots/emptyhomepage.jpg" width="240" /><div>Empty Home (light)</div></td>
+    <td><img src="./screenshots/emptyprogress.jpg" width="240" /><div>Empty Stats (light)</div></td>
+    <td><img src="./screenshots/login.jpg" width="240" /><div>Login</div></td>
+    <td><img src="./screenshots/signup.jpg" width="240" /><div>Sign Up</div></td>
+  </tr>
+  <tr>
+    <td><img src="./screenshots/darkhomepage.jpg" width="240" /><div>Home (dark)</div></td>
+    <td><img src="./screenshots/darkcreatehabit.jpg" width="240" /><div>Create Habit (dark)</div></td>
+    <td><img src="./screenshots/darkstats.jpg" width="240" /><div>Stats (dark)</div></td>
+    <td><img src="./screenshots/darksettings.jpg" width="240" /><div>Settings (dark)</div></td>
+  </tr>
+</table>
 ## Testing
    - Manual Testing Checklist
       - Create, edit, and delete habits
