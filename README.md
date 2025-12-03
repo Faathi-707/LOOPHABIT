@@ -28,7 +28,7 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
    Then:
    - Scan the QR code with Expo Go, or
 
-## 2. Supabase vs Local-only Mode
+### 2. Supabase vs Local-only Mode
 
    Loop Habit works in two modes:
 
@@ -45,7 +45,7 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
          - Habits are synced to Supabase for the logged-in user.
          - Local storage still acts as a cache; app is resilient to network issues.
 
-## Features
+### Features
    1) Habit Management (CRUD)
       Create new habits with:
          - Name
@@ -87,7 +87,7 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
       - AsyncStorage used for persistence
       - When Supabase is configured, app still functions gracefully if network is unavailable
 
-## Tech Stack
+### Tech Stack
       | Layer       | Technology            | Why                                              |
       | ----------- | --------------------- | ------------------------------------------------ |
       | Core        | React Native + Expo   | Cross-platform, fast development                 |
@@ -100,7 +100,7 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
       | i18n        | Custom (EN / Dhivehi) | Lightweight, focused on app labels               |
       | Language    | TypeScript            | Type safety, better tooling, fewer runtime bugs  |
 
-## Navigation Overview
+### Navigation Overview
       Root (_layout.tsx)
       ├─ If not authenticated (Supabase mode):
       │    → (auth)/login, (auth)/signup
@@ -116,7 +116,7 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
                └─ Settings tab
                      └─ /settings
 
-## Screenshots 
+### Screenshots 
       <table>
       <tr>
          <td><img src="./screenshots/homepage.jpg" width="240" /><div>Home (light)</div></td>
@@ -137,8 +137,8 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
          <td><img src="./screenshots/darksettings.jpg" width="240" /><div>Settings (dark)</div></td>
       </tr>
       </table>
-      
-## Testing
+
+### Testing
    - Manual Testing Checklist
       - Create, edit, and delete habits
       - Mark habits as done; restart app; confirm state is persisted 
@@ -151,7 +151,7 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
          - Mark completions
          - Confirm app still works offline
 
-## Known Issues & Future Improvements
+### Known Issues & Future Improvements
    - Known issues
       - Dhivehi translations are inaccurate / incomplete
       - No push notifications or reminders yet
