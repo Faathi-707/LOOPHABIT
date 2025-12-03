@@ -45,7 +45,7 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
          - Habits are synced to Supabase for the logged-in user.
          - Local storage still acts as a cache; app is resilient to network issues.
 
-3. Features
+## Features
    1) Habit Management (CRUD)
       Create new habits with:
          - Name
@@ -87,7 +87,7 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
       - AsyncStorage used for persistence
       - When Supabase is configured, app still functions gracefully if network is unavailable
 
-4. Tech Stack
+## Tech Stack
 | Layer       | Technology            | Why                                              |
 | ----------- | --------------------- | ------------------------------------------------ |
 | Core        | React Native + Expo   | Cross-platform, fast development                 |
@@ -100,7 +100,7 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
 | i18n        | Custom (EN / Dhivehi) | Lightweight, focused on app labels               |
 | Language    | TypeScript            | Type safety, better tooling, fewer runtime bugs  |
 
-5. Navigation Overview
+## Navigation Overview
    Root (_layout.tsx)
    ├─ If not authenticated (Supabase mode):
    │    → (auth)/login, (auth)/signup
@@ -118,11 +118,11 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
             └─ Settings tab
                   └─ /settings
 
-6. Screenshots 
+## Screenshots 
 
 All screenshots are stored in `/screenshots` and represent both light and dark themes.
 
-7. Testing
+## Testing
    - Manual Testing Checklist
       - Create, edit, and delete habits
       - Mark habits as done; restart app; confirm state is persisted 
@@ -135,7 +135,7 @@ All screenshots are stored in `/screenshots` and represent both light and dark t
          - Mark completions
          - Confirm app still works offline
 
-8. Known Issues & Future Improvements
+## Known Issues & Future Improvements
    - Known issues
       - Dhivehi translations are inaccurate / incomplete
       - No push notifications or reminders yet
