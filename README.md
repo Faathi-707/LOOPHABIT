@@ -118,17 +118,71 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
 
 ## Screenshots 
 
-| Light Mode | Light Mode | Light Mode | Light Mode |
-|---|---|---|---|
-| ![Home](./screenshots/homepage.jpg) | ![Create Habit](./screenshots/createhabit.jpg) | ![Stats](./screenshots/stats.jpg) | ![Settings](./screenshots/settings.jpg) |
-| Home | Create Habit | Progress | Settings |
-| ![Empty Home](./screenshots/emptyhomepage.jpg) | ![Empty Progress](./screenshots/emptyprogress.jpg) | ![Login](./screenshots/login.jpg) | ![Sign Up](./screenshots/signup.jpg) |
-| Empty Home | Empty Progress | Login | Sign Up |
+### Light Mode
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="./screenshots/homepage.jpg" width="200" /><br/>
+        <strong>Home</strong>
+      </td>
+      <td align="center">
+        <img src="./screenshots/createhabit.jpg" width="200" /><br/>
+        <strong>Create Habit</strong>
+      </td>
+      <td align="center">
+        <img src="./screenshots/stats.jpg" width="200" /><br/>
+        <strong>Progress</strong>
+      </td>
+      <td align="center">
+        <img src="./screenshots/settings.jpg" width="200" /><br/>
+        <strong>Settings</strong>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="./screenshots/emptyhomepage.jpg" width="200" /><br/>
+        <strong>Empty Home</strong>
+      </td>
+      <td align="center">
+        <img src="./screenshots/emptyprogress.jpg" width="200" /><br/>
+        <strong>Empty Progress</strong>
+      </td>
+      <td align="center">
+        <img src="./screenshots/login.jpg" width="200" /><br/>
+        <strong>Login</strong>
+      </td>
+      <td align="center">
+        <img src="./screenshots/signup.jpg" width="200" /><br/>
+        <strong>Sign Up</strong>
+      </td>
+    </tr>
+  </table>
+</div>
 
-| Dark Mode | Dark Mode | Dark Mode | Dark Mode |
-|---|---|---|---|
-| ![Home Dark](./screenshots/darkhomepage.jpg) | ![Create Habit Dark](./screenshots/darkcreatehabit.jpg) | ![Stats Dark](./screenshots/darkstats.jpg) | ![Settings Dark](./screenshots/darksettings.jpg) |
-| Home (dark) | Create Habit (dark) | Progress (dark) | Settings (dark) |
+### Dark Mode
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="./screenshots/darkhomepage.jpg" width="200" /><br/>
+        <strong>Home (dark)</strong>
+      </td>
+      <td align="center">
+        <img src="./screenshots/darkcreatehabit.jpg" width="200" /><br/>
+        <strong>Create Habit (dark)</strong>
+      </td>
+      <td align="center">
+        <img src="./screenshots/darkstats.jpg" width="200" /><br/>
+        <strong>Stats (dark)</strong>
+      </td>
+      <td align="center">
+        <img src="./screenshots/darksettings.jpg" width="200" /><br/>
+        <strong>Settings (dark)</strong>
+      </td>
+    </tr>
+  </table>
+</div>
 ## Testing
    - Manual Testing Checklist
       - Create, edit, and delete habits
