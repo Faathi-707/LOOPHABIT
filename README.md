@@ -28,7 +28,7 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
    Then:
    - Scan the QR code with Expo Go, or
 
-2. Supabase vs Local-only Mode
+## 2. Supabase vs Local-only Mode
 
    Loop Habit works in two modes:
 
@@ -88,56 +88,56 @@ Loop Habit is a minimal, pastel-themed habit tracker for iOS and Android built w
       - When Supabase is configured, app still functions gracefully if network is unavailable
 
 ## Tech Stack
-| Layer       | Technology            | Why                                              |
-| ----------- | --------------------- | ------------------------------------------------ |
-| Core        | React Native + Expo   | Cross-platform, fast development                 |
-| Navigation  | Expo Router           | File-based routing, clean stacks and tabs        |
-| State       | Zustand               | Minimal global state with persistence middleware |
-| Persistence | AsyncStorage          | Local storage for habits, completions, settings  |
-| Backend     | Supabase (optional)   | Auth + cloud sync with row-level security        |
-| Forms       | React Hook Form + Zod | Type-safe validation and consistent form logic   |
-| Styling     | StyleSheet + theme    | Consistent colors, typography, spacing           |
-| i18n        | Custom (EN / Dhivehi) | Lightweight, focused on app labels               |
-| Language    | TypeScript            | Type safety, better tooling, fewer runtime bugs  |
+      | Layer       | Technology            | Why                                              |
+      | ----------- | --------------------- | ------------------------------------------------ |
+      | Core        | React Native + Expo   | Cross-platform, fast development                 |
+      | Navigation  | Expo Router           | File-based routing, clean stacks and tabs        |
+      | State       | Zustand               | Minimal global state with persistence middleware |
+      | Persistence | AsyncStorage          | Local storage for habits, completions, settings  |
+      | Backend     | Supabase (optional)   | Auth + cloud sync with row-level security        |
+      | Forms       | React Hook Form + Zod | Type-safe validation and consistent form logic   |
+      | Styling     | StyleSheet + theme    | Consistent colors, typography, spacing           |
+      | i18n        | Custom (EN / Dhivehi) | Lightweight, focused on app labels               |
+      | Language    | TypeScript            | Type safety, better tooling, fewer runtime bugs  |
 
 ## Navigation Overview
-   Root (_layout.tsx)
-   ├─ If not authenticated (Supabase mode):
-   │    → (auth)/login, (auth)/signup
-   │
-   └─ If guest or logged in:
-         → (app)/_layout (bottom tabs)
-            ├─ Habits tab
-            │    ├─ / (habits)/index
-            │    ├─ / (habits)/new
-            │    └─ / (habits)/[id]
-            ├─ Progress tab
-            │    └─ /progress
-            └─ Settings tab
-                  └─ /settings
+      Root (_layout.tsx)
+      ├─ If not authenticated (Supabase mode):
+      │    → (auth)/login, (auth)/signup
+      │
+      └─ If guest or logged in:
+            → (app)/_layout (bottom tabs)
+               ├─ Habits tab
+               │    ├─ / (habits)/index
+               │    ├─ / (habits)/new
+               │    └─ / (habits)/[id]
+               ├─ Progress tab
+               │    └─ /progress
+               └─ Settings tab
+                     └─ /settings
 
 ## Screenshots 
-
-<table>
-  <tr>
-    <td><img src="./screenshots/homepage.jpg" width="240" /><div>Home (light)</div></td>
-    <td><img src="./screenshots/createhabit.jpg" width="240" /><div>Create Habit (light)</div></td>
-    <td><img src="./screenshots/stats.jpg" width="240" /><div>Stats (light)</div></td>
-    <td><img src="./screenshots/settings.jpg" width="240" /><div>Settings (light)</div></td>
-  </tr>
-  <tr>
-    <td><img src="./screenshots/emptyhomepage.jpg" width="240" /><div>Empty Home (light)</div></td>
-    <td><img src="./screenshots/emptyprogress.jpg" width="240" /><div>Empty Stats (light)</div></td>
-    <td><img src="./screenshots/login.jpg" width="240" /><div>Login</div></td>
-    <td><img src="./screenshots/signup.jpg" width="240" /><div>Sign Up</div></td>
-  </tr>
-  <tr>
-    <td><img src="./screenshots/darkhomepage.jpg" width="240" /><div>Home (dark)</div></td>
-    <td><img src="./screenshots/darkcreatehabit.jpg" width="240" /><div>Create Habit (dark)</div></td>
-    <td><img src="./screenshots/darkstats.jpg" width="240" /><div>Stats (dark)</div></td>
-    <td><img src="./screenshots/darksettings.jpg" width="240" /><div>Settings (dark)</div></td>
-  </tr>
-</table>
+      <table>
+      <tr>
+         <td><img src="./screenshots/homepage.jpg" width="240" /><div>Home (light)</div></td>
+         <td><img src="./screenshots/createhabit.jpg" width="240" /><div>Create Habit (light)</div></td>
+         <td><img src="./screenshots/stats.jpg" width="240" /><div>Stats (light)</div></td>
+         <td><img src="./screenshots/settings.jpg" width="240" /><div>Settings (light)</div></td>
+      </tr>
+      <tr>
+         <td><img src="./screenshots/emptyhomepage.jpg" width="240" /><div>Empty Home (light)</div></td>
+         <td><img src="./screenshots/emptyprogress.jpg" width="240" /><div>Empty Stats (light)</div></td>
+         <td><img src="./screenshots/login.jpg" width="240" /><div>Login</div></td>
+         <td><img src="./screenshots/signup.jpg" width="240" /><div>Sign Up</div></td>
+      </tr>
+      <tr>
+         <td><img src="./screenshots/darkhomepage.jpg" width="240" /><div>Home (dark)</div></td>
+         <td><img src="./screenshots/darkcreatehabit.jpg" width="240" /><div>Create Habit (dark)</div></td>
+         <td><img src="./screenshots/darkstats.jpg" width="240" /><div>Stats (dark)</div></td>
+         <td><img src="./screenshots/darksettings.jpg" width="240" /><div>Settings (dark)</div></td>
+      </tr>
+      </table>
+      
 ## Testing
    - Manual Testing Checklist
       - Create, edit, and delete habits
